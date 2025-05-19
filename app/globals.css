@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@plugin "@tailwindcss/typography";
+
+@theme {
+	--color-main: oklch(43.42% 0 0);
+	/* Grayscale equivalent of original main */
+	--color-main-50: oklch(95% 0 0);
+	/* Lighter gray for -50 */
+	--color-main-100: oklch(90% 0 0);
+	/* Light gray */
+	--color-main-200: oklch(80% 0 0);
+	--color-main-300: oklch(70% 0 0);
+	--color-main-400: oklch(60% 0 0);
+	--color-main-500: oklch(50% 0 0);
+	/* Mid gray */
+	--color-main-600: oklch(40% 0 0);
+	--color-main-700: oklch(30% 0 0);
+	--color-main-800: oklch(20% 0 0);
+	--color-main-900: oklch(10% 0 0);
+	/* Dark gray */
+}
+
+.font-gloock {
+	font-family: "Gloock", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.font-display {
+	font-family: "Outfit", sans-serif;
+}
