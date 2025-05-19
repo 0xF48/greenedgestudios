@@ -5,7 +5,7 @@ import ScrollToTop from "./ScrollToTop"
 import { NavButtonWrapper } from "./NavButtonWrapper"
 import { Footer } from "./Footer"
 import Link from "next/link"
-
+import { getAssetURL } from './getAssetURL'
 
 export default async function RootLayout({
   children,
@@ -30,9 +30,9 @@ export default async function RootLayout({
       </head>
 
       <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-between flex flex-col">
-        <div className="w-full flex items-center justify-center content-center mt-20 gap-10">
-          <div className="w-24 h-24 rounded-2xl bg-white">
-            <img src={ge_globals.logo} />
+        <div className="w-full flex items-center justify-center content-center mt-40 gap-10">
+          <div className="w-24 h-24 rounded-3xl bg-white">
+            <img src={getAssetURL(ge_globals.logo)} />
           </div>
           <div className="text-3xl font-bold">
             {ge_globals.company_name}

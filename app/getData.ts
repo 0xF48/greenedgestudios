@@ -13,7 +13,7 @@ export const getData = cache(async (): Promise<Schema> => {
 		client.request(readSingleton('ge_globals'))
 	]);
 
-	console.log(ge_photos, ge_globals)
+
 
 
 	return { ge_photos, ge_globals };
