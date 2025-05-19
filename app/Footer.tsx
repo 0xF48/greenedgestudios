@@ -22,7 +22,7 @@ export function Footer() {
 		<div className="pt-10 flex w-full items-center justify-center flex-col">
 
 			<div className="w-fit flex flex-row items-center justify-center">
-				designed by <a href='https://lerp.io/credits'><img src={getAssetURL('64fd2314-6618-4446-9546-4087e55e4a26')} className="w-6 ml-4"></img></a>
+				designed by <a href='https://yruy.lerp.io'><img src={getAssetURL('64fd2314-6618-4446-9546-4087e55e4a26')} className="w-6 ml-4"></img></a>
 			</div>
 			<a href={GLOBAL.DIRECTUS_API} target="_blank" rel="noreferrer" className=" mt-8 p-2 px-5 flex items-center justify-center hover:bg-main-400 group rounded-xl hover:text-white">
 				<PencilIcon className="text-main-600  group-hover:text-white" width={16} strokeWidth={2}></PencilIcon>
