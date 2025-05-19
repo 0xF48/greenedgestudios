@@ -41,11 +41,20 @@ export const PHOTO_CATEGORY_NAME = {
 	[PHOTO_CATEGORY.EVENT]: 'Event'
 }
 
-export type Photo = {
+export type Website = {
 	id: number
-	photo: string
-	category: PHOTO_CATEGORY
+	link: string
+	screenshot: string
+}
 
+export type Photo = {
+	id: string
+	photo: { // Changed from string to object to hold asset details
+		id: string; // The asset ID
+		width: number;
+		height: number;
+	};
+	category: PHOTO_CATEGORY;
 }
 
 export type Globals = {
@@ -60,6 +69,7 @@ export type Globals = {
 export type Schema = {
 	// Define your collections and their types
 	ge_globals: Globals
+	ge_websites: Website[]
 	ge_photos: Photo[]
 }
 

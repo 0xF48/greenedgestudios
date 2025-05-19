@@ -1,6 +1,7 @@
 export function getAssetURL(fileId: string, options?: {
 	width?: number;
 	height?: number;
+	quality?: number;
 	fit?: 'cover' | 'contain' | 'inside' | 'outside';
 }) {
 	if (!fileId) return '';
