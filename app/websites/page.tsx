@@ -13,7 +13,7 @@ function WebsiteCard({ website }: { website: Website }) {
 			href={website.link}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="block border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-6"
+			className="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-6"
 			aria-label={`Visit ${website.link}`}
 		>
 			<div className="relative w-full h-64 bg-gray-200"> {/* Added background color for loading state */}
@@ -34,9 +34,9 @@ function WebsiteCard({ website }: { website: Website }) {
 				)}
 			</div>
 			<div className="p-4 bg-white">
-				<p className="text-sm text-blue-600 hover:underline truncate font-medium" title={website.link}>
+				<a className="text-sm text-main-600 hover:underline truncate font-medium" title={website.link}>
 					{website.link.replace(/^https?:\/\//, '')} {/* Display cleaner link */}
-				</p>
+				</a>
 			</div>
 		</a>
 	);
@@ -54,7 +54,7 @@ export default async function WebsitesPage() { // Renamed for clarity, assuming 
 	));
 
 	return (
-		<div className='p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+		<div className='p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 			{sites}
 		</div >
 	);

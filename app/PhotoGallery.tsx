@@ -11,11 +11,14 @@ function PhotoThumb({ photo }: { photo: Photo }) {
 	console.log(photo)
 	const aspect = photo.photo.width / photo.photo.height
 
-	return <div className={`w-full rounded-2xl overflow-hidden aspect-[${aspect}]`}>
-		<img
-			className='w-full h-full'
-			src={getAssetURL(photo.photo.id)} alt={''}		>
-		</img>
+	return <div className={`w-full aspect-[${aspect}] block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer`}>
+		<a href={getAssetURL(photo.photo.id)}>
+			<img
+				className='w-full h-full'
+				src={getAssetURL(photo.photo.id)} alt={''}		>
+			</img>
+		</a>
+
 	</div>
 }
 
