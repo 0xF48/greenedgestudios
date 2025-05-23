@@ -14,7 +14,7 @@ export function Footer() {
 		<div className="flex flex-row justify-center mt-10">
 			{navOptions.map((option, i) => (
 				<div key={option.href}>
-					<Link href={option.href} className={cn("mx-2", currentOption.href == option.href ? 'text-black' : "text-main-400")}>{option.label}</Link>
+					<Link href={option.href} className={cn("mx-2 hover:underline hover:text-black", currentOption.href == option.href ? 'text-black' : "text-main-400")}>{option.label}</Link>
 					{i < navOptions.length - 1 ? <span className="text-main-300">/</span> : null}
 				</div>
 			))}
