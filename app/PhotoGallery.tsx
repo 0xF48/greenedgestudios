@@ -5,11 +5,16 @@ import { Photo } from "./publicEnums"
 import { getAssetURL } from "./getAssetURL"
 
 
+
+
 function PhotoThumb({ photo }: { photo: Photo }) {
-	return <div>
+	console.log(photo)
+	const aspect = photo.photo.width / photo.photo.height
+
+	return <div className={`w-full rounded-2xl overflow-hidden aspect-[${aspect}]`}>
 		<img
 			className='w-full h-full'
-			src={getAssetURL(photo.id)} alt={''}		>
+			src={getAssetURL(photo.photo.id)} alt={''}		>
 		</img>
 	</div>
 }

@@ -29,7 +29,7 @@ export default async function RootLayout({
         <meta name="description" content={ge_globals.company_description} />
       </head>
 
-      <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-between flex flex-col">
+      <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-start flex flex-col">
         <div className="w-full flex items-center justify-center content-center mt-40 gap-10">
           <div className="w-24 h-24 rounded-3xl bg-white">
             <img src={getAssetURL(ge_globals.logo)} />
@@ -44,7 +44,7 @@ export default async function RootLayout({
 
 
 
-        <div className="w-full mx-auto max-w-6xl min-h-[70vh] mt-[20em] ">
+        <div className="w-full mx-auto max-w-6xl mt-20 ">
           {children}
         </div>
 
