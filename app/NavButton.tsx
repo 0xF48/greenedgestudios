@@ -39,7 +39,7 @@ export function NavButton() {
 	let content
 	let position
 	if (isOpen == false) {
-		position = 'fixed top-[3em] left-1/2 -translate-x-1/2  w-[14em] h-12 right-20'
+		position = 'fixed top-[3em] right-[4em] w-[14em] h-12 right-20'
 		content = <div
 			onClick={onClick}
 			className="w-full h-full flex items-center flex-row px-6 font-display font-black justify-between">
@@ -47,7 +47,7 @@ export function NavButton() {
 			<ChevronsUpDownIcon size={24} />
 		</div>
 	} else {
-		position = 'fixed top-[4em] left-1/2 -translate-x-1/2 w-[14em] h-[15em]'
+		position = 'fixed top-[4em] right-[4em] w-[14em] h-[15em]'
 		content = <div
 			className="w-full h-full flex items-start flex-col font-display font-black">
 			{navOptions.map((option, i) => {

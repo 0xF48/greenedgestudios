@@ -26,17 +26,21 @@ function PhotoThumb({ photo }: { photo: Photo }) {
 export function PhotoGallery({ photos }) {
 	const [filterCategory, setFilter] = useState(null)
 
-	photos = photos.filter((photo: Photo) => {
+	const filteredPhotos = photos.filter((photo: Photo) => {
 		if (filterCategory == null) {
 			return true
 		}
 		return photo.category == filterCategory
 	}).map((photo) => (<PhotoThumb key={photo.id} photo={photo} />))
 
+	const breakpointColumnsObj = {
+		default: 3,
+		768: 2, // 2 columns for screens 768px wide or less
+		// You could add more breakpoints here, e.g., 500: 1 for very small screens
+	};
 
-
-	return <div className="flex flex-col items-center">
-		<div className="flex flex-row gap-2 mb-10">
+	return <div className="flex flex-col items-center px-5">
+		<div className="flex flex-row gap-2 mb-10 flex-wrap ">
 			<button onClick={() => setFilter(null)} className={"cursor-pointer transition-background rounded-full text-sm hover:bg-white p-2 px-4 font-bold transition-colors " + (filterCategory == null ? 'bg-white' : 'bg-main-100')} >
 				All
 			</button>
@@ -49,10 +53,10 @@ export function PhotoGallery({ photos }) {
 
 
 		<Masonry
-			breakpointCols={3}
+			breakpointCols={breakpointColumnsObj}
 			className="my-masonry-grid"
 			columnClassName="my-masonry-grid_column">
-			{photos}
+			{filteredPhotos}
 		</Masonry>
 	</div>
 }
