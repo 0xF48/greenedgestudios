@@ -9,9 +9,7 @@ import { useState } from "react"
 
 
 function PhotoThumb({ photo }: { photo: Photo }) {
-	console.log(photo)
 	const aspect = photo.photo.width / photo.photo.height
-
 	return <div className={`w-full aspect-[${aspect}] block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer`}>
 		<a href={getAssetURL(photo.photo.id)}>
 			<img
