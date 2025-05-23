@@ -30,15 +30,18 @@ export default async function RootLayout({
       </head>
 
       <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-start flex flex-col">
-        <div className="w-full flex items-center justify-center content-center mt-30 md:mt-6 gap-10">
+
+        <Link href='/' className="w-full flex items-center justify-center content-center mt-30 md:mt-6 gap-10">
           <div className="w-24 h-24 rounded-3xl bg-white">
             <img src={getAssetURL(ge_globals.logo)} />
           </div>
           <div className="text-3xl font-bold">
             {ge_globals.company_name}
           </div>
+        </Link>
 
-        </div>
+
+
 
         <NavButtonWrapper />
 
