@@ -13,6 +13,6 @@ export default async function VideoProductionPage() {
 
 
 	return (
-		<div className='prose sm:prose-lg lg:prose-xl max-w-none' dangerouslySetInnerHTML={{ __html: ge_globals.production_page_content }} />
+		<div className='px-4 sm:px-6 prose sm:prose-lg lg:prose-xl max-w-none' dangerouslySetInnerHTML={{ __html: ge_globals.production_page_content }} />
 	);
 }

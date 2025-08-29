@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @plugin "@tailwindcss/typography";
 
+html, body {
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
 @theme {
 	--color-main: oklch(43.42% 0 0);
 	/* Grayscale equivalent of original main */

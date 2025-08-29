@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Home() {
-	return <div className='flex items-center justify-center content-center flex-col gap-10'>
+	return <div className='flex items-center justify-center content-center flex-col gap-10 px-4 sm:px-6'>
 		<div className="w-full max-w-4xl aspect-video">
 			<iframe 
 				className="w-full h-full rounded-lg border-0" 

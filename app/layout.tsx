@@ -29,7 +29,7 @@ export default async function RootLayout({
         <meta name="description" content={ge_globals.company_description} />
       </head>
 
-      <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-start flex flex-col">
+      <body className="bg-main-100 text-main-900 w-full h-fit min-h-screen justify-start flex flex-col overflow-x-hidden">
 
         <Link href='/' className="w-full flex items-center justify-center content-center mt-34 sm:mt-20 md:mt-6 gap-4 sm:gap-6 md:gap-10 px-4 group">
           <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl bg-white flex items-center justify-center overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
@@ -52,7 +52,7 @@ export default async function RootLayout({
 
 
 
-        <div className="w-full mx-auto max-w-6xl mt-20 sm:mt-16 md:mt-20 px-4 sm:px-6">
+        <div className="w-full mx-auto max-w-6xl mt-20 sm:mt-16 md:mt-20">
           {children}
         </div>
 

@@ -14,7 +14,9 @@ export default async function PhotographyPage() {
 
 
 	return (
-		<PhotoGallery photos={ge_photos} />
+		<div className="px-4 sm:px-6">
+			<PhotoGallery photos={ge_photos} />
+		</div>
 
 
 

@@ -10,8 +10,8 @@ import cn from "classnames"
 export function Footer() {
 	const { currentOption } = useNav()
 
-	return < footer className="p-4 sm:p-6 text-center min-h-[10rem] font-inter text-xs sm:text-sm text-main-800" >
-		<div className="flex flex-row justify-center mt-6 sm:mt-10 flex-wrap gap-1">
+	return < footer className="p-4 text-center min-h-[10rem] font-mono text-sm text-main-800" >
+		<div className="flex flex-row justify-center mt-10 flex-wrap gap-1">
 			{navOptions.map((option, i) => (
 				<div key={option.href} className="flex items-center">
 					<Link href={option.href} className={cn("mx-1 sm:mx-2 hover:underline hover:text-black", currentOption.href == option.href ? 'text-black' : "text-main-400")}>{option.label}</Link>
