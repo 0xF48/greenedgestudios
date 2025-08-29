@@ -13,6 +13,6 @@ export default async function TestimonialsPage() {
 
 
 	return (
-		<div className='p-4 prose lg:prose-xl max-w-none' dangerouslySetInnerHTML={{ __html: ge_globals.testimonials_page_content }} />
+		<div className='prose sm:prose-lg lg:prose-xl max-w-none' dangerouslySetInnerHTML={{ __html: ge_globals.testimonials_page_content }} />
 	);
 }

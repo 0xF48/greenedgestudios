@@ -35,17 +35,17 @@ export function PhotoGallery({ photos }) {
 
 	const breakpointColumnsObj = {
 		default: 3,
-		768: 2, // 2 columns for screens 768px wide or less
-		// You could add more breakpoints here, e.g., 500: 1 for very small screens
+		768: 2,
+		480: 1
 	};
 
-	return <div className="flex flex-col items-center px-5">
-		<div className="flex flex-row gap-2 mb-10 flex-wrap ">
-			<button onClick={() => setFilter(null)} className={"cursor-pointer transition-background rounded-full text-sm hover:bg-white p-2 px-4 font-bold transition-colors " + (filterCategory == null ? 'bg-white' : 'bg-main-100')} >
+	return <div className="flex flex-col items-center">
+		<div className="flex flex-row gap-2 mb-6 sm:mb-10 flex-wrap justify-center">
+			<button onClick={() => setFilter(null)} className={"cursor-pointer transition-background rounded-full text-xs sm:text-sm hover:bg-white p-2 px-3 sm:px-4 font-bold transition-colors " + (filterCategory == null ? 'bg-white' : 'bg-main-100')} >
 				All
 			</button>
 			{Object.keys(PHOTO_CATEGORY_NAME).map((enumKey) => {
-				return <button onClick={() => setFilter(enumKey)} className={"cursor-pointer transition-background rounded-full text-sm hover:bg-white p-2 px-4 font-bold transition-colors " + (filterCategory == enumKey ? 'bg-white' : 'bg-main-100')}>
+				return <button key={enumKey} onClick={() => setFilter(enumKey)} className={"cursor-pointer transition-background rounded-full text-xs sm:text-sm hover:bg-white p-2 px-3 sm:px-4 font-bold transition-colors " + (filterCategory == enumKey ? 'bg-white' : 'bg-main-100')}>
 					{PHOTO_CATEGORY_NAME[enumKey]}
 				</button>
 			})}

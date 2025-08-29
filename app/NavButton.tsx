@@ -39,17 +39,17 @@ export function NavButton() {
 	let content
 	let position
 	if (isOpen == false) {
-		position = 'fixed top-[3em] right-[4em] w-[14em] h-12 right-20'
+		position = 'fixed top-[3em] left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-[4em] sm:translate-x-0 w-[12em] sm:w-[14em] h-12'
 		content = <div
 			onClick={onClick}
-			className="w-full h-full flex items-center flex-row px-6 font-display font-black justify-between">
+			className="w-full h-full flex items-center flex-row px-4 sm:px-6 font-inter font-semibold justify-between text-sm sm:text-base">
 			{selectedOption.label}
-			<ChevronsUpDownIcon size={24} />
+			<ChevronsUpDownIcon size={20} className="sm:w-6 sm:h-6" />
 		</div>
 	} else {
-		position = 'fixed top-[4em] right-[4em] w-[14em] h-[15em]'
+		position = 'fixed top-[4em] left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-[4em] sm:translate-x-0 w-[12em] sm:w-[14em] h-[15em]'
 		content = <div
-			className="w-full h-full flex items-start flex-col font-display font-black">
+			className="w-full h-full flex items-start flex-col font-inter font-medium">
 			{navOptions.map((option, i) => {
 				return <div onClick={() => {
 					router.replace(option.href)
@@ -58,7 +58,7 @@ export function NavButton() {
 
 				}}
 					key={option.href}
-					className={cn(option.href == selectedOption.href ? "text-black" : "text-main-400", "w-full h-12 flex items-center flex-row transition-colors px-6  hover:text-black")}>
+					className={cn(option.href == selectedOption.href ? "text-black" : "text-main-400", "w-full h-12 flex items-center flex-row transition-colors px-4 sm:px-6 hover:text-black text-sm sm:text-base")}>
 					{option.label}
 				</div>
 			})}
