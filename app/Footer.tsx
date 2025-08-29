@@ -23,7 +23,7 @@ export function Footer() {
 
 
 			<a href={GLOBAL.DIRECTUS_API} target="_blank" rel="noreferrer" className="mb-6 sm:mb-8 p-2 px-4 sm:px-5 flex items-center justify-center hover:bg-main-200/50 group rounded-xl ">
-				<PencilIcon className="text-main-300  group-hover:text-black" width={14} height={14} className="sm:w-4 sm:h-4" strokeWidth={2}></PencilIcon>
+				<PencilIcon className="text-main-300 group-hover:text-black sm:w-4 sm:h-4" width={14} height={14} strokeWidth={2}></PencilIcon>
 			</a>
 			<div className="w-fit flex flex-row items-center justify-center text-main-300 text-xs sm:text-sm">
 				designed by <a href='https://yury.lerp.io'><img src={getAssetURL('64fd2314-6618-4446-9546-4087e55e4a26')} className="w-5 sm:w-6 ml-2 sm:ml-4" alt="Designer logo"></img></a>
